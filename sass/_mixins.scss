@@ -1,0 +1,6 @@
+@mixin hover-suave {
+    transition: $anim;
+    &:hover {
+    transform: translateY(-5px);
+    }
+}
