@@ -3,6 +3,24 @@
     object-fit: cover;
 }
 
+.formularios{
+    flex: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.body-formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: space-between;
+}
+
+
 .card:hover {
     transform: translateY(-5px);
     transition: 0.3s;
