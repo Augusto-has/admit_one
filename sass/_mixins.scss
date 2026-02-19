@@ -1,6 +1,23 @@
-@mixin hover-suave {
+@mixin flex($direction, $justify, $align, $wrap: nowrap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    flex-wrap: $wrap;
+}
+
+@mixin hover-suave($distancia: -5px) {
     transition: $anim;
+
     &:hover {
-    transform: translateY(-5px);
+        transform: translateY($distancia);
+    }
+}
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint ==mobile {
+        @media (max-width: 768px) {
+            @content;
+        }
     }
 }

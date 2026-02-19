@@ -1,0 +1,42 @@
+.body-formulario {
+    @include flex(column, space-between, center);
+    min-height: 100vh;
+}
+
+.producto {
+    @include flex(row, center, center, wrap);
+    gap: $espacio + 10;
+    padding-top: $espacio + 10;
+    margin-bottom: $espacio * 3;
+}
+
+.comentarios-card {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: $espacio;
+}
+
+.img-cover {
+    height: 70vh;
+    object-fit: cover;
+}
+
+/* Responsive */
+@include responsive(mobile) {
+
+    .producto {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .comentarios-card {
+        grid-template-columns: 1fr;
+        place-items: center;
+    }
+
+    .img-cover {
+        height: 50vh;
+    }
+}
